@@ -1,8 +1,12 @@
 # My Obsidian CSS Snippets
 
+---
+
 ## About
 
 My stash for CSS snippets I've used to customize [Obsidian](https://obsidian.md), my go-to note-taking app.
+
+---
 
 ### [WYSIWIG-like.css](https://github.com/frankreporting/obsidian-snippets/blob/main/WYSIWYG-like.css)
 
