@@ -1,0 +1,15 @@
+/* Make url string muted and hyperlinked text colored, like HTML */
+/* updated */
+/* 7/6/21 */
+
+.CodeMirror-line span.cm-string+.cm-url {
+    color: var(--text-muted);
+}
+
+.CodeMirror-line span.cm-link {
+    color: var(--text-accent);
+}
+
+.CodeMirror-line .cm-formatting.cm-formatting-link-string.cm-string.cm-url {
+    color: var(--text-muted);
+}
