@@ -12,7 +12,7 @@ This one gives you a WYSIWIG-like interface directly in the edit view, as oppose
 
 If you couple this snippet with Ozan's Image in Editor plugin, you get something like this:
 
-
+![](demo/WYSIWYG-demo.gif)
 
 **NOTE:** This isn't a perfect solution, but I've been pretty happy with it. There appears to be an occasional, unavoidable conflict between the markdown line length and the "rendered" line length that make it impossible for you to get the cursor to the proper end of the line. I've found a fairly consistent fix is to delete a character or two and then re-type them. This seems to reset the cursor position and line length so everything is in sync again.
 
