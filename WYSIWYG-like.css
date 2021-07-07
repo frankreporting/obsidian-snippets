@@ -1,7 +1,11 @@
-/* WYSIWIG-like formatting */
-/* adapted from org-sidian.css and oz-image-in-editor-obsidian */
-/* updated */
-/* 7/6/21 */
+/* WYSIWIG-like formatting
+
+Adapted from: 
+    - Santi Younger's Org-sidian-Bullets: https://github.com/santiyounger/Org-sidian-Bullets
+    - Ozan Tellioglu's oz-image-in-editor-obsidian: https://github.com/ozntel/oz-image-in-editor-obsidian
+
+Last Updated: 7/6/21 
+*/
 
 /* Headers */
 .markdown-preview-view h1, .cm-header-1 { font-size: 1.64rem; }
