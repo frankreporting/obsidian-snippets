@@ -3,8 +3,9 @@
 Adapted from: 
     - Santi Younger's Org-sidian-Bullets: https://github.com/santiyounger/Org-sidian-Bullets
     - Ozan Tellioglu's oz-image-in-editor-obsidian: https://github.com/ozntel/oz-image-in-editor-obsidian
+    - ChezFrancois's Typora-like Custom CSS shared in Obsidian Forum
 
-Last Updated: 7/6/21 
+Last Updated: 7/16/21 
 */
 
 /* Headers */
@@ -87,12 +88,15 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting.cm-formatting-quote,
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hmd-indent-in-quote {
   color: transparent !important;
+  display: inline !important;
 }
 div:not(.CodeMirror-activeline)>.HyperMD-quote {
    border-left: 3px solid var(--text-selection);
    border-color: var(--text-accent) !important;
+   border-radius: 0 8px 8px 0;
+   background-color:rgb(238, 234, 234);
    margin-left: 5px;
-   padding: 10px 6px 10px 6px;
+   padding: 8px 18px 8px 8px;
    display: inline-block;
    width: 100%;
 }
@@ -128,22 +132,29 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
 /* --- TASKS ---  */
 
 /* hide - [ ] if not active line */
-.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-task {
-    display:none;
-}
-
-/* completed task */
-.CodeMirror-code> :not(.CodeMirror-activeline) .cm-formatting-task.cm-property+.cm-list-1::before {
-    margin-left: 0.2em;
-    margin-right: 1.3em;
-    content: "✅";
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-task.cm-meta,
+.CodeMirror-code > :not(.CodeMirror-activeline) .cm-formatting-task.cm-property {
+    display:inline !important;
+    color: transparent;
+    margin-left: -2em;
 }
 
 /* incomplete task */
-.CodeMirror-code> :not(.CodeMirror-activeline) .cm-meta+.cm-list-1::before {
-    margin-left: 0.2em;
-    margin-right: 1.3em;
-    content: "⬜️";
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta::after {
+  content: "⬜️";  
+  margin-right: 0.2em;
+  color:rgb(124, 131, 124);
+}
+
+/* completed task */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
+    content: "✅";
+    margin-right: 0.2em;
+    color:rgb(124, 131, 124) !important;
+}
+span.cm-formatting-task.cm-property ~ span {
+  text-decoration: line-through;
+  color: rgb(124, 131, 124) !important;
 }
 
 /* --- HIGHLIGHTS ---  */
@@ -167,4 +178,12 @@ div:not(.CodeMirror-activeline) >
 div:not(.CodeMirror-activeline) >
 .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
     display:none;
+}
+
+/* --- WIKILINKS ---  */
+
+/* Hide [[]] if not active line */
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link:not(.cm-link) {
+  display:none;
 }
