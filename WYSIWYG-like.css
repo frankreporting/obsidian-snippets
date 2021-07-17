@@ -179,11 +179,3 @@ div:not(.CodeMirror-activeline) >
 .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
     display:none;
 }
-
-/* --- WIKILINKS ---  */
-
-/* Hide [[]] if not active line */
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link,
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-link:not(.cm-link) {
-  display:none;
-}
